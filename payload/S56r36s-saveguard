@@ -1,0 +1,26 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-2.0-or-later
+set -eu
+pidfile=/run/r36s-saveguard.pid
+case "${1:-}" in
+start)
+    if [ -f "$pidfile" ] && kill -0 "$(cat "$pidfile")" 2>/dev/null; then exit 0; fi
+    /opt/r36s-toolkit/bin/python3 /usr/local/libexec/r36s-saveguard.py >/tmp/r36s-saveguard.log 2>&1 &
+    echo $! >"$pidfile"
+    ;;
+stop)
+    if [ -f "$pidfile" ]; then
+        pid=$(cat "$pidfile")
+        kill -TERM "$pid" 2>/dev/null || true
+        count=0
+        while kill -0 "$pid" 2>/dev/null && [ "$count" -lt 50 ]; do
+            sleep 0.1; count=$((count+1))
+        done
+        # Do not remove the pidfile of a daemon that has not exited.
+        if kill -0 "$pid" 2>/dev/null; then exit 1; fi
+        rm -f "$pidfile"
+    fi
+    sync
+    ;;
+*) echo 'Uso: S56r36s-saveguard start|stop' >&2; exit 2 ;;
+esac

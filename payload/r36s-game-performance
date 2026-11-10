@@ -1,0 +1,31 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Only selects frequencies already exposed by this kernel; no overclock.
+set -eu
+state=/run/r36s-game-performance
+cpu=/sys/devices/system/cpu/cpu0/cpufreq
+gpu=/sys/class/devfreq/1c40000.gpu
+case "${1:-}" in
+start)
+    [ ! -d "$state" ] || exit 0
+    [ -r "$cpu/scaling_governor" ] && [ -r "$gpu/max_freq" ] || exit 1
+    grep -qw performance "$cpu/scaling_available_governors" || exit 1
+    umask 077
+    mkdir "$state"
+    cat "$cpu/scaling_governor" >"$state/cpu-governor"
+    cat "$gpu/min_freq" >"$state/gpu-min"
+    # Restore partially applied changes too if a sysfs write fails.
+    trap '"$0" restore' EXIT
+    echo performance >"$cpu/scaling_governor"
+    cat "$gpu/max_freq" >"$gpu/min_freq"
+    trap - EXIT
+    ;;
+restore)
+    [ -d "$state" ] || exit 0
+    cat "$state/gpu-min" >"$gpu/min_freq"
+    cat "$state/cpu-governor" >"$cpu/scaling_governor"
+    rm -f "$state/gpu-min" "$state/cpu-governor"
+    rmdir "$state"
+    ;;
+*) echo 'Uso: r36s-game-performance start|restore' >&2; exit 2 ;;
+esac
