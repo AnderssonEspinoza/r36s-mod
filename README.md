@@ -8,7 +8,7 @@ Juegos · Terminal con teclado · SOC y forense · Música · Lectura
 
 [Empezar](docs/INSTALACION.md) · [Compatibilidad](#antes-de-empezar) · [Fotos](#así-quedó) · [Qué incluye](#qué-puedes-instalar) · [Historia](docs/HISTORIA.md)
 
-<img src="assets/photos/hero.png" alt="R36S azul con Kennel y Pokémon Odyssey; portada promocional proporcionada por el autor" width="370">
+<a href="assets/photos/hero.png"><img src="assets/photos/hero.png" alt="Portada promocional R36S MOD" width="310"></a>
 
 *Proyecto personal de [Andersson Espinoza](https://github.com/AnderssonEspinoza) · @dvinci.sh*
 
@@ -34,20 +34,24 @@ El instalador **no flashea, no particiona y no repara microSDs**. Conserva las r
 
 ## Así quedó
 
+Esta es la galería fotográfica actual del proyecto, presentada en dos columnas para facilitar la lectura. **Toca cada imagen para ampliarla.**
+
 <table>
 <tr>
-<td align="center"><a href="assets/photos/pokemon.png"><img src="assets/photos/pokemon.png" alt="Carrusel de juegos con portadas en Kennel" width="220"></a><br><b>Tu biblioteca con carátulas</b></td>
-<td align="center"><a href="assets/photos/soc.png"><img src="assets/photos/soc.png" alt="Categoría SOC y forense en la consola real" width="220"></a><br><b>SOC y forense</b></td>
-<td align="center"><a href="assets/photos/terminal.png"><img src="assets/photos/terminal.png" alt="Terminal de Kennel con teclado en pantalla" width="220"></a><br><b>Terminal con teclado</b></td>
+<td align="center" width="50%"><a href="assets/photos/soc.png"><img src="assets/photos/soc.png" alt="SOC y forense en la R36S azul" width="190"></a><br><strong>SOC y forense</strong><br><sub>Análisis de archivos e IOC</sub></td>
+<td align="center" width="50%"><a href="assets/photos/linux.png"><img src="assets/photos/linux.png" alt="Linux y seguridad en la R36S azul" width="190"></a><br><strong>Linux y seguridad</strong><br><sub>Herramientas en la consola</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="assets/photos/linux.png"><img src="assets/photos/linux.png" alt="Categoría Linux y seguridad" width="220"></a><br><b>Linux portátil</b></td>
-<td align="center"><a href="assets/photos/digimon.png"><img src="assets/photos/digimon.png" alt="Entrada de Digimon Rumble Arena en la biblioteca" width="220"></a><br><b>Clásicos de tu colección</b></td>
-<td align="center"><a href="assets/photos/tekken.png"><img src="assets/photos/tekken.png" alt="Entrada de Tekken NewGen en la biblioteca" width="220"></a><br><b>Perfiles por juego</b></td>
+<td align="center" width="50%"><a href="assets/photos/terminal.png"><img src="assets/photos/terminal.png" alt="Terminal con teclado en la R36S azul" width="190"></a><br><strong>Terminal con teclado</strong><br><sub>Python y comandos</sub></td>
+<td align="center" width="50%"><a href="assets/photos/pokemon.png"><img src="assets/photos/pokemon.png" alt="Biblioteca de juegos en la R36S azul" width="190"></a><br><strong>Biblioteca de juegos</strong><br><sub>Carátulas y selección</sub></td>
+</tr>
+<tr>
+<td align="center" width="50%"><a href="assets/photos/digimon.png"><img src="assets/photos/digimon.png" alt="Digimon Rumble Arena en la R36S azul" width="190"></a><br><strong>Digimon Rumble Arena</strong><br><sub>Menú de juegos retro</sub></td>
+<td align="center" width="50%"><a href="assets/photos/tekken.png"><img src="assets/photos/tekken.png" alt="Tekken NewGen en la R36S azul" width="190"></a><br><strong>Tekken NewGen</strong><br><sub>Entrada de PSP en Kennel</sub></td>
 </tr>
 </table>
 
-Las seis fotos de la galería documentan nuestra consola. La portada principal es una imagen promocional proporcionada por el autor. **Ver un juego en el menú no demuestra que funcione fluido.** Las portadas comerciales aparecen en las fotos; las ROMs y los archivos originales de esas carátulas no se distribuyen.
+Las fotografías documentan la configuración personal de la consola. La portada superior es una composición promocional proporcionada por el autor. **Que un juego aparezca en el menú no demuestra que funcione fluidamente.** Las ROMs, BIOS y carátulas originales no se distribuyen.
 
 ## Qué puedes instalar
 
